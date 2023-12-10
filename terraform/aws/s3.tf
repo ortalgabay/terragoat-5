@@ -33,6 +33,9 @@ resource "aws_s3_bucket_versioning" "data" {
 
 resource "aws_s3_bucket" "data_log_bucket" {
   bucket = "data-log-bucket"
+  tags = {
+    yor_trace = "655c550f-8376-4c3b-9764-055fdd0a2eb7"
+  }
 }
 
 resource "aws_s3_bucket_logging" "data" {
@@ -46,11 +49,17 @@ resource "aws_s3_bucket_logging" "data" {
 
 resource "aws_s3_bucket" "data_log_bucket" {
   bucket = "data-log-bucket"
+  tags = {
+    yor_trace = "655c550f-8376-4c3b-9764-055fdd0a2eb7"
+  }
 }
 
 
 resource "aws_s3_bucket" "data_log_bucket_log_bucket" {
   bucket = "data_log_bucket-log-bucket"
+  tags = {
+    yor_trace = "865be337-104a-44fa-94b0-cbfcff901879"
+  }
 }
 
 resource "aws_s3_bucket_logging" "data_log_bucket" {
